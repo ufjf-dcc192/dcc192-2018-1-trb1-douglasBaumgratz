@@ -1,7 +1,6 @@
 package br.ufjf.dcc192;
 
 import br.ufjf.dcc192.Dominio.ListaDePedidos;
-import br.ufjf.dcc192.Dominio.ListaDeProduto;
 import br.ufjf.dcc192.Dominio.Mesa;
 import br.ufjf.dcc192.Dominio.Pedido;
 import br.ufjf.dcc192.Dominio.Produto;
@@ -47,10 +46,6 @@ public class ControlePedidos extends HttpServlet {
             request.setAttribute("produto", produto);
             RequestDispatcher despachante = request.getRequestDispatcher("WEB-INF/ItensSolicitados.jsp");
             despachante.forward(request, response);
-        } else if ("/Muda-status.html".equals(request.getServletPath())) {
-            mudaStatus(request, response);
-            RequestDispatcher despachante = request.getRequestDispatcher("/WEB-INF/PedidosSolicitados.jsp");
-            despachante.forward(request, response);
         } else if ("/EncerrarPedido.html".equals(request.getServletPath())) {
             encerrarPedido(request, response);
             request.setAttribute("pedido", pedido);
@@ -65,16 +60,16 @@ public class ControlePedidos extends HttpServlet {
 
     }
 
-    public void mudaStatus(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<Pedido> pedido = new ListaDePedidos().getInstance();
-        request.setAttribute("pedido", pedido);
-        Pedido pedidos = new Pedido(ListaDePedidos.getInstance().get(Integer.parseInt(request.getParameter("id"))).getMesa());
-        if (!ListaDePedidos.getInstance().get(Integer.parseInt(request.getParameter("id"))).getSituacao()) {
-            pedidos.setSituacao(true);
-        } else {
-            pedidos.setSituacao(false);
-        }
-        ListaDePedidos.getInstance().set(Integer.parseInt(request.getParameter("id")), pedidos);
-    }
+//    public void mudaStatus(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+//        List<Pedido> pedido = new ListaDePedidos().getInstance();
+//        request.setAttribute("pedido", pedido);
+//        Pedido pedidos = new Pedido(ListaDePedidos.getInstance().get(Integer.parseInt(request.getParameter("id"))).getMesa());
+//        if (!ListaDePedidos.getInstance().get(Integer.parseInt(request.getParameter("id"))).getSituacao()) {
+//            pedidos.setSituacao(true);
+//        } else {
+//            pedidos.setSituacao(false);
+//        }
+//        ListaDePedidos.getInstance().set(Integer.parseInt(request.getParameter("id")), pedidos);
+//    }
 
 }

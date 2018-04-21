@@ -11,7 +11,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Lista de Figurinhas</h1>
+        <h1>Pedidos Solicitados</h1>
         <table border = 1>
             <th>Mesa</th>
             <th>Situação</th>
@@ -26,9 +26,9 @@
                 %>   
             <tr>                
                 <td><%=pedido.getMesa().getId()%></td>
-                <td><a href="Muda-status.html?id=<%=i%>"><%=pedido.getSituacao()%></a></td>
+                <td><%=pedido.getSituacao()%></a></td>
                 <td><%=pedido.getHorarioAbertura()%></td>
-                <td><%=pedido.getHorarioEncerramento()%></td>                
+                <td><%=pedido.getHorarioEncerramento()%></td>                     
                 <td><a href="ItensSolicitados.html?id=<%=i%>">----Visualizar----</a></td>
                 <td><a href="ItensAdicionar.html?id=<%=i%>">----Adicionar----</a></td>
                 <td><a href="EncerrarPedido.html?id=<%=i%>"><label>----Fechar Mesa----</label></a></td>
