@@ -14,7 +14,12 @@ public class Pedido {
     List<Produto> lista = new ArrayList<>();
 
     public Pedido(Mesa mesa) {
-       lista = ListaDeProduto.getInstance();
+        lista.add(new Produto("Shampoo"));
+        lista.add(new Produto("Desodorante"));
+        lista.add(new Produto("Papel Toalha"));
+        lista.add(new Produto("Sabão em pó"));
+        lista.add(new Produto("Copo"));
+        //lista = ListaDeProduto.getInstance();
         this.mesa = mesa;
         this.situacao = true;
         horarioAbertura = Time.valueOf(LocalTime.now());

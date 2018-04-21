@@ -24,12 +24,9 @@ public class ControlePedidos extends HttpServlet {
             String nome = request.getParameter("nome");
             Produto produto = new Produto(nome);
             Integer id = Integer.parseInt(request.getParameter("id"));
-            List<Pedido> pedido = new ListaDePedidos().getInstance();
-            pedido.get(id).getLista().add(produto);
-            
-            List<Produto> produtos =  pedido.get(id).getLista();
-
-            request.setAttribute("produto", produtos);
+            List<Pedido> pedido = new ListaDePedidos().getInstance();            
+            pedido.get(id).getLista().add(produto);            
+            request.setAttribute("produto", pedido.get(id).getLista());
         }
         response.sendRedirect("ControlePedidos.html");
     }
