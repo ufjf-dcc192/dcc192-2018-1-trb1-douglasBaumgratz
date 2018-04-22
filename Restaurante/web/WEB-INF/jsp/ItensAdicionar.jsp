@@ -8,7 +8,9 @@
     <body>
         <h1>Carrinho de compras</h1>
         <form method="post">
-            <label>Digite o nome do produto: <input type="text" name="nome" value="" /> </label>
+            <label>Nome do produto: <input type="text" name="nome" value="" /> </label><br>
+            <label>Quantidade:      <input type="text" name="quantidade" value="" /> </label><br>
+            <label>Preço:           <input type="text" name="preco" value="" /> </label><br>            
             <input type="submit" value="Gravar" />
             <input type="reset" value="Limpar" />
         </form>

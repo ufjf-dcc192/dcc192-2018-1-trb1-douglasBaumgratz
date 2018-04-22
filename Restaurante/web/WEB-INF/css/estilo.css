@@ -13,3 +13,7 @@ font-size: larger;
     alignment-adjust: central;
     margin: auto;
 }
+header{
+    margin: auto;
+    background-color: blue;
+}

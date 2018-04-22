@@ -14,11 +14,11 @@ public class Pedido {
     List<Produto> lista = new ArrayList<>();
 
     public Pedido(Mesa mesa) {
-        lista.add(new Produto("Shampoo"));
-        lista.add(new Produto("Desodorante"));
-        lista.add(new Produto("Papel Toalha"));
-        lista.add(new Produto("Sabão em pó"));
-        lista.add(new Produto("Copo"));
+        lista.add(new Produto("Shampoo", 2, 12.5));
+        lista.add(new Produto("Desodorante", 1, 10.0));
+        lista.add(new Produto("Papel Toalha", 3, 1.0));
+        lista.add(new Produto("Sabão em pó", 1, 15.0));
+        lista.add(new Produto("Copo", 5, 1.0));
         //lista = ListaDeProduto.getInstance();
         this.mesa = mesa;
         this.situacao = true;
@@ -63,4 +63,12 @@ public class Pedido {
         this.situacao = false; //altera situação pedido para false(encerrado);
     }
 
+    public Double getTotal(Integer qtd, Double preco) {
+        Double total = 0.0;
+
+        for (int i = 0; i < lista.size(); i++) {
+            total += lista.get(i).getQuantidade() * lista.get(i).getPreco();
+        }
+        return total;
+    }
 }

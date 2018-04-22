@@ -23,6 +23,7 @@
                         <th>Situação</th>
                         <th>Abertura</th>
                         <th>Encerramento</th>
+                        <th>Total</th>
                         <th>Itens Solicitados</th>
                         <th>Add Produto</th>
                         <th>Fechar Pedido</th>
@@ -34,7 +35,8 @@
                             <td><%=pedido.getMesa().getId()%></td>
                             <td><%=pedido.getSituacao()%></a></td>
                             <td><%=pedido.getHorarioAbertura()%></td>
-                            <td><%=pedido.getHorarioEncerramento()%></td>                     
+                            <td><%=pedido.getHorarioEncerramento()%></td>                                                 
+                            <td></td>                     
                             <td><a href="ItensSolicitados.html?id=<%=i%>">----Visualizar----</a></td>
                             <td><a href="ItensAdicionar.html?id=<%=i%>">----Adicionar----</a></td>
                             <td><a href="EncerrarPedido.html?id=<%=i%>"><label>----Fechar Mesa----</label></a></td>

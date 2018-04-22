@@ -10,16 +10,23 @@
     </head>
     <body>
         <h1>Itens Solicitados</h1>
-        <%
-            int i = 0;
-            for (Produto produto : (List<Produto>) request.getAttribute("produto")) {
-        %>   
-        <ul>            
-            <li><%=produto.getNome()%></li>       
-        </ul>
-        <%
-            }
-        %>
+        <table border = 1>
+            <th>Nome</th>
+            <th>Quantidade</th>
+            <th>Preço</th>
+            <tr>
+                <%
+                    int i = 0;
+                    for (Produto produto : (List<Produto>) request.getAttribute("produto")) {
+                %>   
+                <td><%=produto.getNome()%></td>
+                <td><%=produto.getQuantidade()%></td>
+                <td><%=produto.getPreco()%></td>        
+            </tr>
+            <%
+                }
+            %>
+        </table>
         <a href="ControlePedidos.html"><p>Voltar para Controle de Pedidos</p></a>
     </body>
 </html>
