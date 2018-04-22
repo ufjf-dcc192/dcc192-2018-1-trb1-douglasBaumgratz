@@ -15,26 +15,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(name = "ControlePedidos", urlPatterns = {"/ControlePedidos.html", "/AdicionarṔedido.html", "/EncerrarPedido.html",
-    "/ItensAdicionar.html", "/ItensSolicitados.html", "/Muda-status.html"})
+    "/ItensAdicionar.html", "/ItensSolicitados.html"})
 public class ControleServlet extends HttpServlet {
 
     RequestDispatcher despachante;
     List<Pedido> pedido = new ListaDePedidos().getInstance();
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        if ("/ItensAdicionar.html".equals(request.getServletPath())) {
-            String nome = request.getParameter("nome");
-            Integer quantidade = Integer.parseInt(request.getParameter("quantidade"));
-            Double preco = Double.parseDouble(request.getParameter("preco"));
-            Produto produto = new Produto(nome, quantidade, preco);
-            Integer id = Integer.parseInt(request.getParameter("id"));
-            List<Pedido> pedido = new ListaDePedidos().getInstance();
-            pedido.get(id).getLista().add(produto);
-            request.setAttribute("produto", pedido.get(id).getLista());
-        }
-        response.sendRedirect("ControlePedidos.html");
-    }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -63,6 +48,22 @@ public class ControleServlet extends HttpServlet {
         }
     }
 
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        Integer id = Integer.parseInt(request.getParameter("id"));
+        String nome = request.getParameter("nome");
+        Integer quantidade = Integer.parseInt(request.getParameter("quantidade"));
+        Double preco = Double.parseDouble(request.getParameter("preco"));
+        Produto produto;
+
+        if ("/ItensAdicionar.html".equals(request.getServletPath())) {
+            produto = new Produto(nome, quantidade, preco);
+            pedido.get(id).getLista().add(produto);
+            request.setAttribute("produto", pedido.get(id).getLista());
+        }
+        response.sendRedirect("ControlePedidos.html");
+    }
+
     public void tabelaPedidos(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int total = 0;
         List<Integer> listaT = new ArrayList<>();
@@ -82,7 +83,7 @@ public class ControleServlet extends HttpServlet {
 
     private void encerrarPedido(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Integer id = Integer.parseInt(request.getParameter("id"));
-        pedido.get(id).encerrarPedido();
+        pedido.get(id).encerrarPedidoNow();
 
     }
 

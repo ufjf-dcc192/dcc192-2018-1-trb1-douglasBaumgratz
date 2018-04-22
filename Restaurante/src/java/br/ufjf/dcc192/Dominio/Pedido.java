@@ -18,8 +18,7 @@ public class Pedido {
         lista.add(new Produto("Desodorante", 1, 10.0));
         lista.add(new Produto("Papel Toalha", 3, 1.0));
         lista.add(new Produto("Sabão em pó", 1, 15.0));
-        lista.add(new Produto("Copo", 5, 1.0));
-        //lista = ListaDeProduto.getInstance();
+        lista.add(new Produto("Copo", 5, 1.0));        
         this.mesa = mesa;
         this.situacao = true;
         horarioAbertura = Time.valueOf(LocalTime.now());
@@ -58,7 +57,7 @@ public class Pedido {
         return situacao;
     }
 
-    public void encerrarPedido() {
+    public void encerrarPedidoNow() {
         this.horarioEncerramento = Time.valueOf(LocalTime.now()); //seto horário de encerramento com base no horário atual        
         this.situacao = false; //altera situação pedido para false(encerrado);
     }
