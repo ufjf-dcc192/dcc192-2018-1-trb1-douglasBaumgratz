@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "ControlePedidos", urlPatterns = {"/ControlePedidos.html", "/EncerrarPedido.html",
+@WebServlet(name = "ControlePedidos", urlPatterns = {"/ControlePedidos.html","/AdicionarṔedido.html", "/EncerrarPedido.html",
     "/ItensAdicionar.html", "/ItensSolicitados.html", "/Muda-status.html"})
 public class ControleServlet extends HttpServlet {
 
@@ -36,27 +36,27 @@ public class ControleServlet extends HttpServlet {
         RequestDispatcher despachante;
         if ("/ControlePedidos.html".equals(request.getServletPath())) {
             request.setAttribute("pedido", pedido);
-            despachante = request.getRequestDispatcher("WEB-INF/PedidosSolicitados.jsp");
+            despachante = request.getRequestDispatcher("WEB-INF/jsp/PedidosSolicitados.jsp");
             despachante.forward(request, response);
         } else if ("/ItensAdicionar.html".equals(request.getServletPath())) {
             Integer id = Integer.parseInt(request.getParameter("id"));
             if (pedido.get(id).getSituacao() == false) {
-                despachante = request.getRequestDispatcher("WEB-INF/ItensAdicionadosErro.jsp");
+                despachante = request.getRequestDispatcher("WEB-INF/jsp/ItensAdicionadosErro.jsp");
                 despachante.forward(request, response);
             } else {
-                despachante = request.getRequestDispatcher("WEB-INF/ItensAdicionar.jsp");
+                despachante = request.getRequestDispatcher("WEB-INF/jsp/ItensAdicionar.jsp");
                 despachante.forward(request, response);
             }
         } else if ("/ItensSolicitados.html".equals(request.getServletPath())) {
             Integer id = Integer.parseInt(request.getParameter("id"));
             List<Produto> produto = pedido.get(id).getLista();
             request.setAttribute("produto", produto);
-            despachante = request.getRequestDispatcher("WEB-INF/ItensSolicitados.jsp");
+            despachante = request.getRequestDispatcher("WEB-INF/jsp/ItensSolicitados.jsp");
             despachante.forward(request, response);
         } else if ("/EncerrarPedido.html".equals(request.getServletPath())) {
             encerrarPedido(request, response);
             request.setAttribute("pedido", pedido);
-            despachante = request.getRequestDispatcher("WEB-INF/PedidosSolicitados.jsp");
+            despachante = request.getRequestDispatcher("WEB-INF/jsp/PedidosSolicitados.jsp");
             despachante.forward(request, response);
         }
     }
@@ -67,15 +67,4 @@ public class ControleServlet extends HttpServlet {
 
     }
 
-//    public void mudaStatus(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//        List<Pedido> pedido = new ListaDePedidos().getInstance();
-//        request.setAttribute("pedido", pedido);
-//        Pedido pedidos = new Pedido(ListaDePedidos.getInstance().get(Integer.parseInt(request.getParameter("id"))).getMesa());
-//        if (!ListaDePedidos.getInstance().get(Integer.parseInt(request.getParameter("id"))).getSituacao()) {
-//            pedidos.setSituacao(true);
-//        } else {
-//            pedidos.setSituacao(false);
-//        }
-//        ListaDePedidos.getInstance().set(Integer.parseInt(request.getParameter("id")), pedidos);
-//    }
 }

@@ -9,10 +9,10 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-        <link rel="stylesheet" href="WEB-INF/css/estilos.css"> </link>
+        <link rel="stylesheet" href="WEB-INF/css/estilos.css" type="text/css"> 
     </head>
     <body>
-        <div id="paginaHome">
+        <div class="paginaHome">
             <header>
                 <h1>Pedidos Solicitados</h1>
             </header>
@@ -46,7 +46,7 @@
                     </table>
                     <a href="index.html"><p>Voltar Menu</p></a>
                 </nav>
-                <div id ="paginaCentral">
+                <div class ="paginaCentral">
 
                 </div>
             </section>
