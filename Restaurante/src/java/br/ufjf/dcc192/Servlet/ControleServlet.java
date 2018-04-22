@@ -5,6 +5,7 @@ import br.ufjf.dcc192.Dominio.Mesa;
 import br.ufjf.dcc192.Dominio.Pedido;
 import br.ufjf.dcc192.Dominio.Produto;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -63,7 +64,18 @@ public class ControleServlet extends HttpServlet {
     }
 
     public void tabelaPedidos(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int total = 0;
+        List<Integer> listaT = new ArrayList<>();
+        for (int i = 0; i < ListaDePedidos.getInstance().size(); i++) {
+            for (int j = 0; j < ListaDePedidos.getInstance().get(i).getLista().size(); j++) {
+                Double preco = ListaDePedidos.getInstance().get(i).getLista().get(j).getPreco();
+                Integer quantidade = ListaDePedidos.getInstance().get(i).getLista().get(j).getQuantidade();
+                total += preco * quantidade;
+            }
+            listaT.add(total);
+        }
         request.setAttribute("pedido", pedido);
+        request.setAttribute("total", total);
         despachante = request.getRequestDispatcher("WEB-INF/jsp/PedidosSolicitados.jsp");
         despachante.forward(request, response);
     }

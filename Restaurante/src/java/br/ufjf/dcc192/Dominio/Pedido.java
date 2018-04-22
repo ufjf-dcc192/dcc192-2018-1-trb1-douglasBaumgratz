@@ -63,7 +63,7 @@ public class Pedido {
         this.situacao = false; //altera situação pedido para false(encerrado);
     }
 
-    public Double getTotal(Integer qtd, Double preco) {
+    public Double getTotal() {
         Double total = 0.0;
 
         for (int i = 0; i < lista.size(); i++) {
