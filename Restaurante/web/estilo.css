@@ -1,0 +1,13 @@
+header, footer ,#tabela{
+    background-color: #DEDACB;
+    margin: auto;
+    text-align: center;
+}
+
+body{    
+    text-align: center;        
+}
+#tabela{
+    /*background-color: #DEDACB;*/
+    margin: auto;
+}

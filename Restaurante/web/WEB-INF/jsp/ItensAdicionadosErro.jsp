@@ -10,15 +10,16 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+           <link rel="stylesheet" href="estilo.css" type="text/css"> 
     </head>
     <body>
         <div id="paginaHome">
             <header>
-                <h2>Erro!</h2>
+                <h2>Pedido Encerrado!</h2>
             </header>
             <section>
                 <nav>
-                    <h3>Desculpe não é possível adicionar produto. Pedido encerrado!</h3>       
+                    <h3>Desculpe não é possível adicionar produto.</h3>       
                     <a href="ControlePedidos.html"><p>Voltar para Controle de Pedidos</p></a>
                 </nav>
             </section>
