@@ -23,8 +23,9 @@ public class ControlePedidos extends HttpServlet {
             String nome = request.getParameter("nome");
             Produto produto = new Produto(nome);
             Integer id = Integer.parseInt(request.getParameter("id"));
-            List<Pedido> pedido = new ListaDePedidos().getInstance();            
-            pedido.get(id).getLista().add(produto);            
+            List<Pedido> pedido = new ListaDePedidos().getInstance();
+
+            pedido.get(id).getLista().add(produto);
             request.setAttribute("produto", pedido.get(id).getLista());
         }
         response.sendRedirect("ControlePedidos.html");
@@ -38,8 +39,14 @@ public class ControlePedidos extends HttpServlet {
             RequestDispatcher despachante = request.getRequestDispatcher("WEB-INF/PedidosSolicitados.jsp");
             despachante.forward(request, response);
         } else if ("/ItensAdicionar.html".equals(request.getServletPath())) {
-            RequestDispatcher despachante = request.getRequestDispatcher("WEB-INF/ItensAdicionar.jsp");
-            despachante.forward(request, response);
+            Integer id = Integer.parseInt(request.getParameter("id"));
+            if (pedido.get(id).getSituacao() == false) {
+                RequestDispatcher despachante = request.getRequestDispatcher("WEB-INF/ItensAdicionadosErro.jsp");
+                despachante.forward(request, response);
+            } else {
+                RequestDispatcher despachante = request.getRequestDispatcher("WEB-INF/ItensAdicionar.jsp");
+                despachante.forward(request, response);
+            }
         } else if ("/ItensSolicitados.html".equals(request.getServletPath())) {
             Integer id = Integer.parseInt(request.getParameter("id"));
             List<Produto> produto = pedido.get(id).getLista();
@@ -71,5 +78,4 @@ public class ControlePedidos extends HttpServlet {
 //        }
 //        ListaDePedidos.getInstance().set(Integer.parseInt(request.getParameter("id")), pedidos);
 //    }
-
 }
