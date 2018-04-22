@@ -12,26 +12,31 @@
     <body>
         <div id="paginaHome">
             <header>
-                <h1>Itens Solicitados</h1>
+                <h1>Mercearia - Pais e Filhos</h1>     
             </header>
-            <table border = 1 id="tabela">
-                <th>Nome</th>
-                <th>Quantidade</th>
-                <th>Preço</th>
-                <tr>
+            <div id="paginaCentral">
+                <br>
+                 <h1>Lista de Consumo</h1>                 
+                <table border = 1 id="tabela">
+                    <th>Nome</th>
+                    <th>Quantidade</th>
+                    <th>Preço</th>
+                    <tr>
+                        <%
+                            int i = 0;
+                            for (Produto produto : (List<Produto>) request.getAttribute("produto")) {
+                        %>   
+                        <td><%=produto.getNome()%></td>
+                        <td><%=produto.getQuantidade()%></td>
+                        <td><%=produto.getPreco()%></td>        
+                    </tr>
                     <%
-                        int i = 0;
-                        for (Produto produto : (List<Produto>) request.getAttribute("produto")) {
-                    %>   
-                    <td><%=produto.getNome()%></td>
-                    <td><%=produto.getQuantidade()%></td>
-                    <td><%=produto.getPreco()%></td>        
-                </tr>
-                <%
-                    }
-                %>
-            </table>
-            <a href="ControlePedidos.html"><p>Voltar para Controle de Pedidos</p></a>
+                        }
+                    %>
+                </table>
+                <br><br><br><br><br><br><br><br><br><br><br><br>
+                <a href="ControlePedidos.html" id="voltarMenu"><p>Voltar para Controle de Pedidos</p></a>
+            </div>
         </div>
         <div id="paginaFinal">
             <footer>                    

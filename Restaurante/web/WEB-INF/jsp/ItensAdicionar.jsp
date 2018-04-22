@@ -9,19 +9,26 @@
     <body>
         <div id="paginaHome">
             <header>
-                <h1>Carrinho de compras</h1>
+                <h1>Mercearia - Pais e Filhos</h1>     
             </header>
-
-            <form method="post" id="formulario">
-                <label>Nome do produto: <input type="text" name="nome" value="" /> </label><br>
-                <label>Quantidade:      <input type="text" name="quantidade" value="" /> </label><br>
-                <label>Preço:           <input type="text" name="preco" value="" /> </label><br>            
-                <input type="submit" value="Gravar" />
-                <input type="reset" value="Limpar" />
-            </form>        
-            <a href="ControlePedidos.html"><p>Voltar para Controle de Pedidos</p></a>
+            <div id="paginaCentral">
+                <br>                 
+                <h2>Inserir Produto no pedido</h2>
+                <br>                
+                <br>  
+                <form method="post" id="formulario">
+                    <label>Nome do produto:&nbsp <input type="text" name="nome" value="" /> </label><br>
+                    <label>Quantidade:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="quantidade" value="" /> </label><br>
+                    <label>Preço: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="text" name="preco" value="" /> </label><br>            
+                    <br>
+                    <input type="submit" value="Gravar" />
+                    <input type="reset" value="Limpar" />
+                </form>        
+                <br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <a href="ControlePedidos.html" id="voltarMenu"><p>Voltar para Controle de Pedidos</p></a>
+            </div>
         </div>
-        
+
         <div id="paginaFinal">
             <footer>                    
                 Desenvolvido por: Douglas Baumgratz de Carvalho<br>

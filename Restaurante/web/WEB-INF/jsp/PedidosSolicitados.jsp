@@ -8,7 +8,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>        
+        <title>Mercearia - Pais e Filhos</title>        
         <link rel="stylesheet" href="estilo.css" type="text/css"> 
     </head>
     <body>
@@ -25,8 +25,10 @@
                             <li><a href='ControlePedidos.html'>Controle de Pedidos</a></li>                        
                         </ul>                                   
                     </nav>               
-                    <div id="paginaCentral">                    
+                    <div id="paginaCentral">   
+                        <br>
                         <h1>Pedidos</h1>
+                        <br>
                         <table border = 1 id="tabela">
                             <th>Mesa</th>
                             <th>Situação</th>
@@ -60,7 +62,8 @@
                                     i++;
                                 }
                             %>            
-                        </table>            
+                        </table>     
+                        <br><br><br><br><br><br><br><br><br><br><br><br>
                         <a href="index.html" id="voltarMenu"><p>Voltar Menu</p></a>
                     </div>
                 </section>

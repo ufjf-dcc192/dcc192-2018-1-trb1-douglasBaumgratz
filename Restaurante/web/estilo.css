@@ -4,6 +4,7 @@
     border: solid red 2px;
     width: 1200px;
     margin: auto;
+    height: 600px;
 }
 
 /*#paginaBorda{
@@ -28,7 +29,7 @@
 }
 
 #pagina section{
-    height: 500px;
+    
     width: 100%;        
 }
 
@@ -36,7 +37,7 @@
     background-color: yellow;
     width: 210px;
     float: left;
-    height: 175px;
+    height: 513px;
     border: solid red 2px;
 }
 
@@ -46,8 +47,7 @@
     float: right;
     height: 500px;        
 }
-#paginaCentral{
-    
+#paginaCentral{    
     text-align: center;
     width: 1140px;
 }
@@ -59,7 +59,7 @@
 }
 
 #voltarMenu{
-    text-align: center;
+    text-align: right;
 }
 #tabela{
     width: 1000;
@@ -68,7 +68,7 @@
 }
 #menu{    
     margin: auto;    
-    width: 169.9px;
+    width: 180px;
     height: 80px;
 }
 
