@@ -5,6 +5,12 @@
     width: 1200px;
     margin: auto;
 }
+
+/*#paginaBorda{
+    height: 100%;
+    width: 100%;
+    
+}*/
 #paginaFinal footer  {
     background-color: blue;     
     width: 1200px;
@@ -18,25 +24,32 @@
     border: solid red 2px;
     color: white;
     text-align: center;
+     width: 1200px;
 }
 
 #pagina section{
     height: 500px;
-    width: 100%;
+    width: 100%;        
 }
 
 #paginaHome section nav{
     background-color: yellow;
-    width: 200px;
+    width: 210px;
     float: left;
-    height: 135px;
+    height: 175px;
+    border: solid red 2px;
 }
 
 #pagina section #paginaCentral{
-    background-color: red;
-    width: 1000px;
+    background-color: black;
+    
     float: right;
-    height: 500px;
+    height: 500px;        
+}
+#paginaCentral{
+    
+    text-align: center;
+    width: 1140px;
 }
 
 #paginaFinal footer  {
@@ -48,6 +61,17 @@
 #voltarMenu{
     text-align: center;
 }
+#tabela{
+    width: 1000;
+    margin:auto;
+    background-color: lightgrey;
+}
+#menu{    
+    margin: auto;    
+    width: 169.9px;
+    height: 80px;
+}
+
 /*#tabela{
     background-color: #DEDACB;
     margin: auto;
@@ -61,14 +85,6 @@
     background-color: gray;
     margin: auto;
     text-align: center;    
-}
-#menu{
-    background-color: gray;
-    margin: auto;
-    text-align: left;    
-}
-body{    
-    text-align: center;   
-    margin: auto;
 }*/
+
 
