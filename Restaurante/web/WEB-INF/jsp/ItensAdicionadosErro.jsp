@@ -10,7 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-           <link rel="stylesheet" href="estilo.css" type="text/css"> 
+        <link rel="stylesheet" href="estilo.css" type="text/css"> 
     </head>
     <body>
         <div id="paginaHome">
@@ -25,4 +25,11 @@
             </section>
         </div>
     </body>
+    <div id="paginaFinal">
+        <footer>                    
+            Desenvolvido por: Douglas Baumgratz de Carvalho<br>
+            Sistemas de Informação - UFJF
+            <br>
+        </footer>
+    </div>
 </html>

@@ -12,57 +12,56 @@
         <link rel="stylesheet" href="estilo.css" type="text/css"> 
     </head>
     <body>
-        <div>
+        <div id="paginaHome">
             <header>
                 <h1>Pedidos Solicitados</h1>
             </header>
             <section>
-                <nav>
-                    <div>
-                        <table border = 1 id="tabela">
-                            <th>Mesa</th>
-                            <th>Situação</th>
-                            <th>Abertura</th>
-                            <th>Encerramento</th>
-                            <th>Total Pedido</th>
-                            <th>Itens Solicitados</th>
-                            <th>Add Produto</th>
-                            <th>Fechar Pedido</th>
-                                <%
-                                    int i = 0;
-                                    for (Pedido pedido : (List<Pedido>) request.getAttribute("pedido")) {
-                                %>   
-                            <tr>                
-                                <td><%=pedido.getMesa().getId()%></td>
-                                <td><%=pedido.getSituacao()%></a></td>
-                                <td><%=pedido.getHorarioAbertura()%></td>
-                                <td><%=pedido.getHorarioEncerramento()%></td>                                                 
-                                <%
-                                    //for (Integer obj : (List<Integer>) request.getAttribute("total")) {
-                                %>
-                                <td><label>R$:<%=pedido.getTotal()%></label></td>                     
-                                <%
-                                    // }
-                                %>
-                                <td><a href="ItensSolicitados.html?id=<%=i%>">----Visualizar----</a></td>
-                                <td><a href="ItensAdicionar.html?id=<%=i%>">----Adicionar----</a></td>
-                                <td><a href="EncerrarPedido.html?id=<%=i%>"><label>----Fechar Mesa----</label></a></td>
-                            </tr>
+                <nav>                    
+                    <table border = 1 id="tabela">
+                        <th>Mesa</th>
+                        <th>Situação</th>
+                        <th>Abertura</th>
+                        <th>Encerramento</th>
+                        <th>Total Pedido</th>
+                        <th>Itens Solicitados</th>
+                        <th>Add Produto</th>
+                        <th>Fechar Pedido</th>
                             <%
-                                    i++;
-                                }
-                            %>            
-                        </table>
+                                int i = 0;
+                                for (Pedido pedido : (List<Pedido>) request.getAttribute("pedido")) {
+                            %>   
+                        <tr>                
+                            <td><%=pedido.getMesa().getId()%></td>
+                            <td><%=pedido.getSituacao()%></a></td>
+                            <td><%=pedido.getHorarioAbertura()%></td>
+                            <td><%=pedido.getHorarioEncerramento()%></td>                                                 
+                            <%
+                                //for (Integer obj : (List<Integer>) request.getAttribute("total")) {
+                            %>
+                            <td><label>R$:<%=pedido.getTotal()%></label></td>                     
+                            <%
+                                // }
+                            %>
+                            <td><a href="ItensSolicitados.html?id=<%=i%>">----Visualizar----</a></td>
+                            <td><a href="ItensAdicionar.html?id=<%=i%>">----Adicionar----</a></td>
+                            <td><a href="EncerrarPedido.html?id=<%=i%>"><label>----Fechar Mesa----</label></a></td>
+                        </tr>
+                        <%
+                                i++;
+                            }
+                        %>            
+                    </table>
                     </div>
                     <a href="index.html"><p>Voltar Menu</p></a>
                 </nav>
-                <div class ="paginaCentral">
-
-                </div>
             </section>
-            <footer>
-                zxcxzczx
-            </footer>
+            <div id ="paginaFinal">
+                <footer>
+                    Desenvolvido por: Douglas Baumgratz de Carvalho
+                    Sistemas de Informação - UFJF
+                </footer>
+            </div>
         </div>
     </body>
 

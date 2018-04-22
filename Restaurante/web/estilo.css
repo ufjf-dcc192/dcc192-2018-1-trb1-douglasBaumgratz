@@ -1,13 +1,26 @@
-header, footer ,#tabela{
-    background-color: #DEDACB;
-    margin: auto;
-    text-align: center;
-}
 
-body{    
-    text-align: center;        
-}
 #tabela{
     /*background-color: #DEDACB;*/
     margin: auto;
+    border: gray;
+}
+#formulario{
+    margin: auto;
+    border: gray;
+}
+body{    
+    text-align: center;   
+        margin: auto;
+}
+
+#paginaHome header {
+    background-color: gray;
+    margin: auto;
+    text-align: center;    
+}
+
+#paginaFinal footer{
+    background-color: gray;
+    margin: auto;
+    text-align: right;    
 }
