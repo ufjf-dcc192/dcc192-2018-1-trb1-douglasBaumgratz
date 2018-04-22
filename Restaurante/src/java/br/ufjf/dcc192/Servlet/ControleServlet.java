@@ -1,4 +1,4 @@
-package br.ufjf.dcc192;
+package br.ufjf.dcc192.Servlet;
 
 import br.ufjf.dcc192.Dominio.ListaDePedidos;
 import br.ufjf.dcc192.Dominio.Mesa;
@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(name = "ControlePedidos", urlPatterns = {"/ControlePedidos.html", "/EncerrarPedido.html",
     "/ItensAdicionar.html", "/ItensSolicitados.html", "/Muda-status.html"})
-public class ControlePedidos extends HttpServlet {
+public class ControleServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
