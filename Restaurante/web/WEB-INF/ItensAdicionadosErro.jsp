@@ -12,7 +12,16 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h3>Desculpe não é possível adicionar produto. Pedido encerrado!</h3>
-        <a href="ControlePedidos.html"><p>Voltar para Controle de Pedidos</p></a>
+        <div id="paginaHome">
+            <header>
+                <h2>Erro!</h2>
+            </header>
+            <section>
+                <nav>
+                    <h3>Desculpe não é possível adicionar produto. Pedido encerrado!</h3>       
+                    <a href="ControlePedidos.html"><p>Voltar para Controle de Pedidos</p></a>
+                </nav>
+            </section>
+        </div>
     </body>
 </html>

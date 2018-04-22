@@ -1,0 +1,16 @@
+#paginaHome{
+
+    background-color: #C2EFC2;
+    border: solid red 2px;
+    width:1200px;
+    alignment-adjust: central;
+    margin: auto;
+}
+#paginaCentralpagina{
+font-size: larger;
+    background-color: #C2EFC2;
+    border: solid red 2px;
+    width:1200px;
+    alignment-adjust: central;
+    margin: auto;
+}
