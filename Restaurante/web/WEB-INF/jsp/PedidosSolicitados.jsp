@@ -13,12 +13,20 @@
     </head>
     <body>
         <div id="paginaHome">
-            <header>
-                <h1>Pedidos Solicitados</h1>
+            <header>                
+                <h1>Pedidos Solicitados</h1>                
             </header>
             <section>
                 <nav>                    
-                    <table border = 1 id="tabela">
+                    <h1> M e n u</h1>
+                    <ol>
+                        <li>XXXXXXXXXXXXXX</li>
+                        <li>XXXXXXXXXXXXXX</li>
+                        <li>XXXXXXXXXXXXXX</li>
+                    </ol>                                      
+                </nav>               
+                <div id="paginaCentral">                    
+                    <table border = 1>
                         <th>Mesa</th>
                         <th>Situação</th>
                         <th>Abertura</th>
@@ -51,18 +59,17 @@
                                 i++;
                             }
                         %>            
-                    </table>
-                    </div>
-                    <a href="index.html"><p>Voltar Menu</p></a>
-                </nav>
+                    </table>            
+                    <a href="index.html" id="voltarMenu"><p>Voltar Menu</p></a>
+                </div>
             </section>
-            <div id ="paginaFinal">
-                <footer>
-                    Desenvolvido por: Douglas Baumgratz de Carvalho
-                    Sistemas de Informação - UFJF
-                </footer>
-            </div>
         </div>
+        <div id="paginaFinal">
+            <footer>                    
+                Desenvolvido por: Douglas Baumgratz de Carvalho<br>
+                Sistemas de Informação - UFJF
+                <br>
+            </footer>
+        </div> 
     </body>
-
 </html>

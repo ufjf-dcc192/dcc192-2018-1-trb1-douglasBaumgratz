@@ -1,26 +1,74 @@
 
-#tabela{
-    /*background-color: #DEDACB;*/
+#paginaHome{
+    background-color: #ededed;
+    border: solid red 2px;
+    width: 1200px;
     margin: auto;
-    border: gray;
 }
-#formulario{
+#paginaFinal footer  {
+    background-color: blue;     
+    width: 1200px;
+    text-align: center;  
     margin: auto;
-    border: gray;
+    border: solid red 2px;
+    color: white;
 }
-body{    
-    text-align: center;   
-        margin: auto;
+#paginaHome header{
+    background-color: blue;
+    border: solid red 2px;
+    color: white;
+    text-align: center;
 }
 
-#paginaHome header {
+#pagina section{
+    height: 500px;
+    width: 100%;
+}
+
+#paginaHome section nav{
+    background-color: yellow;
+    width: 200px;
+    float: left;
+    height: 135px;
+}
+
+#pagina section #paginaCentral{
+    background-color: red;
+    width: 1000px;
+    float: right;
+    height: 500px;
+}
+
+#paginaFinal footer  {
+    background-color: blue;
+    color: white;        
+    text-align: center;    
+}
+
+#voltarMenu{
+    text-align: center;
+}
+/*#tabela{
+    background-color: #DEDACB;
+    margin: auto;
+    border: gray;
+}*/
+/*#formulario {
+    margin: auto;
+    border: gray;
+}
+#index header{
     background-color: gray;
     margin: auto;
     text-align: center;    
 }
-
-#paginaFinal footer{
+#menu{
     background-color: gray;
     margin: auto;
-    text-align: right;    
+    text-align: left;    
 }
+body{    
+    text-align: center;   
+    margin: auto;
+}*/
+
