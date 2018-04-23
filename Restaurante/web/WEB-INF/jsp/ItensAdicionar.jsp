@@ -17,18 +17,19 @@
                 <%
                     Mesa mesa = (Mesa) request.getAttribute("mesa");
                 %>
-                <h1>Inserir produto na Mesa número: <%=mesa.getId()%></h1>  
+                <h1>Inserir produto <br>
+                    Mesa número: <%=mesa.getId()%></h1>  
                 <br>                
                 <br>  
                 <form method="post" id="formulario">
                     <label>Nome do produto:&nbsp <input type="text" name="nome" value="" /> </label><br>
                     <label>Quantidade:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="quantidade" value="" /> </label><br>
                     <label>Preço: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="text" name="preco" value="" /> </label><br>            
-                    <br>
-                    <input type="submit" value="Gravar" />
+                    <br> 
                     <input type="reset" value="Limpar" />
+                    <input type="submit" value="Salvar" />
                 </form>        
-                <br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <br><br><br><br><br><br><br><br><br><br>                
                 <a href="ControlePedidos.html" id="voltarMenu"><p>Voltar para Controle de Pedidos</p></a>
             </div>
         </div>

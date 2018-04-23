@@ -18,31 +18,36 @@ import javax.servlet.http.HttpServletResponse;
     "/ItensAdicionar.html", "/ItensSolicitados.html"})
 public class ControleServlet extends HttpServlet {
 
-    RequestDispatcher despachante;
-    List<Pedido> pedido = new ListaDePedidos().getInstance();
+    private RequestDispatcher despachante;
+    private List<Pedido> pedidos = new ListaDePedidos().getInstance();
+    private Mesa mesa;
+    private List<Produto> produto;
+    private Pedido pedido;
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        RequestDispatcher despachante;
+        
         if ("/ControlePedidos.html".equals(request.getServletPath())) {
-            request.setAttribute("pedido", pedido);
+            request.setAttribute("pedido", pedidos);
             tabelaPedidos(request, response);
         } else if ("/ItensAdicionar.html".equals(request.getServletPath())) {
             Integer id = Integer.parseInt(request.getParameter("id"));
-            if (pedido.get(id).getSituacao() == false) {
+            if (pedidos.get(id).getSituacao() == false) {
                 despachante = request.getRequestDispatcher("WEB-INF/jsp/ItensAdicionadosErro.jsp");
                 despachante.forward(request, response);
             } else {
-                Mesa mesa = pedido.get(id).getMesa();
+                mesa = pedidos.get(id).getMesa();
                 request.setAttribute("mesa", mesa);
                 despachante = request.getRequestDispatcher("WEB-INF/jsp/ItensAdicionar.jsp");
                 despachante.forward(request, response);
             }
         } else if ("/ItensSolicitados.html".equals(request.getServletPath())) {
             Integer id = Integer.parseInt(request.getParameter("id"));
-            List<Produto> produto = pedido.get(id).getLista();
-            Mesa mesa = pedido.get(id).getMesa();
-            request.setAttribute("mesa", mesa);
+            produto = pedidos.get(id).getLista();
+            mesa = pedidos.get(id).getMesa();
+            pedido = pedidos.get(id);
+            request.setAttribute("mesa", mesa);            
+            request.setAttribute("pedido", pedido);
             request.setAttribute("produto", produto);
             despachante = request.getRequestDispatcher("WEB-INF/jsp/ItensSolicitados.jsp");
             despachante.forward(request, response);
@@ -59,11 +64,10 @@ public class ControleServlet extends HttpServlet {
         Integer quantidade = Integer.parseInt(request.getParameter("quantidade"));
         Double preco = Double.parseDouble(request.getParameter("preco"));
         Produto produto;
-
         if ("/ItensAdicionar.html".equals(request.getServletPath())) {
             produto = new Produto(nome, quantidade, preco);
-            pedido.get(id).getLista().add(produto);
-            request.setAttribute("produto", pedido.get(id).getLista());
+            pedidos.get(id).getLista().add(produto);
+            request.setAttribute("produto", pedidos.get(id).getLista());
         }
         response.sendRedirect("ControlePedidos.html");
     }
@@ -79,7 +83,7 @@ public class ControleServlet extends HttpServlet {
             }
             listaT.add(total);
         }
-        request.setAttribute("pedido", pedido);
+        request.setAttribute("pedido", pedidos);
         request.setAttribute("total", total);
         despachante = request.getRequestDispatcher("WEB-INF/jsp/PedidosSolicitados.jsp");
         despachante.forward(request, response);
@@ -87,8 +91,6 @@ public class ControleServlet extends HttpServlet {
 
     private void encerrarPedido(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Integer id = Integer.parseInt(request.getParameter("id"));
-        pedido.get(id).encerrarPedidoNow();
-
+        pedidos.get(id).encerrarPedidoNow();
     }
-
 }

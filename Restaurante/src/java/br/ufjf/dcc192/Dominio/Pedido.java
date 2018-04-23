@@ -14,11 +14,11 @@ public class Pedido {
     List<Produto> lista = new ArrayList<>();
 
     public Pedido(Mesa mesa) {
-        lista.add(new Produto("Shampoo", 2, 12.5));
-        lista.add(new Produto("Desodorante", 1, 10.0));
-        lista.add(new Produto("Papel Toalha", 3, 1.0));
-        lista.add(new Produto("Sabão em pó", 1, 15.0));
-        lista.add(new Produto("Copo", 5, 1.0));        
+        lista.add(new Produto("Cerveja", 2, 5.0));
+        lista.add(new Produto("Porção Torresmo", 1, 4.0));
+        lista.add(new Produto("Porção Batata Frita com Queijo", 3, 10.0));
+        lista.add(new Produto("Almoço mais Refrigerante(500ml)", 1, 15.0));
+        lista.add(new Produto("Dose de Capirinha", 5, 4.0));        
         this.mesa = mesa;
         this.situacao = true;
         horarioAbertura = Time.valueOf(LocalTime.now());

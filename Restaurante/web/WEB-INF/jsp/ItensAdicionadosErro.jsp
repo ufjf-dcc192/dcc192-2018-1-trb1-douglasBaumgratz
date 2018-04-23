@@ -23,11 +23,11 @@
                         <br>
                         <h3 id="idErro">Pedido Encerrado!</h3>     
                         <h3 id="idErro" >Desculpe não é possível adicionar produto.</h3>       
-                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                        <a href="ControlePedidos.html" id="voltarMenu"><p>Voltar para Controle de Pedidos</p></a>
+                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>                        
                     </nav>
-                </section>
-            </div>
+                </section> 
+                 <a href="ControlePedidos.html" id="voltarMenu"><p>Voltar para Menu</p></a>
+            </div>            
         </div>
     </body>
     <div id="paginaFinal">

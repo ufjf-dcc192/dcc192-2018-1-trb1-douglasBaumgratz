@@ -21,26 +21,34 @@
                 <%
                     Mesa mesa = (Mesa) request.getAttribute("mesa");
                 %>
-                <h1>Lista de Consumo Mesa número: <%=mesa.getId()%></h1>  
-                
+                <h1>Lista de Consumo <br>
+                    Mesa número: <%=mesa.getId()%></h1>  
+
                 <table border = 1 id="tabela">
                     <th>Nome</th>
                     <th>Quantidade</th>
-                    <th>Preço</th>
-                    <tr>
+                    <th>Preço</th>                    
+                    <tr>                    
                         <%
                             int i = 0;
+                            Pedido pedido = (Pedido) request.getAttribute("pedido");
                             for (Produto produto : (List<Produto>) request.getAttribute("produto")) {
                         %>   
                         <td><%=produto.getNome()%></td>
                         <td><%=produto.getQuantidade()%></td>
-                        <td><%=produto.getPreco()%></td>        
+                        <td><%=produto.getPreco()%></td>                                
                     </tr>
                     <%
                         }
                     %>
+
+                    <tr>
+                        <td>Total:</td>
+                        <td colspan="2"><%=pedido.getTotal()%></td>
+                    </tr>
+
                 </table>
-                <br><br><br><br><br><br><br><br><br><br><br><br>
+                <br><br><br><br><br><br><br><br>
                 <a href="ControlePedidos.html" id="voltarMenu"><p>Voltar para Controle de Pedidos</p></a>
             </div>
         </div>
