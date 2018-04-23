@@ -15,7 +15,7 @@
         <div id="paginaBorda">
             <div id="paginaHome">
                 <header>                
-                    <h1>Mercearia - Pais e Filhos</h1>                
+                    <h1>Bar&Restaurante</h1>                   
                 </header>
                 <section>
                     <nav>                    
@@ -46,14 +46,8 @@
                                 <td><%=pedido.getMesa().getId()%></td>
                                 <td><%=pedido.getSituacao()%></a></td>
                                 <td><%=pedido.getHorarioAbertura()%></td>
-                                <td><%=pedido.getHorarioEncerramento()%></td>                                                 
-                                <%
-                                    //for (Integer obj : (List<Integer>) request.getAttribute("total")) {
-%>
-                                <td><label>R$:<%=pedido.getTotal()%></label></td>                     
-                                <%
-                                    // }
-%>
+                                <td><%=pedido.getHorarioEncerramento()%></td>  
+                                <td><label>R$:<%=pedido.getTotal()%></label></td>    
                                 <td><a href="ItensSolicitados.html?id=<%=i%>">----Visualizar----</a></td>
                                 <td><a href="ItensAdicionar.html?id=<%=i%>">----Adicionar----</a></td>
                                 <td><a href="EncerrarPedido.html?id=<%=i%>"><label>----Fechar Mesa----</label></a></td>
@@ -64,7 +58,7 @@
                             %>            
                         </table>     
                         <br><br><br><br><br><br><br><br><br><br><br><br>
-                        <a href="index.html" id="voltarMenu"><p>Voltar Menu</p></a>
+                        <a href="index.html" id="voltarMenu"><p>Voltar</p></a>
                     </div>
                 </section>
             </div>

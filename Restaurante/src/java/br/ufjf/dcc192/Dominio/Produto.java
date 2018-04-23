@@ -6,7 +6,7 @@ package br.ufjf.dcc192.Dominio;
  */
 public class Produto {
     String nome;
-    Integer quantidade;
+    Integer quantidade;    
     Double preco;
 
     public Produto(String nome, Integer quantidade, Double preco) {

@@ -15,14 +15,14 @@
     <body>
         <div id="paginaHome">
             <header>
-                <h1>Mercearia - Pais e Filhos</h1>     
+                <h1>Bar&Restaurante</h1>      
             </header>
             <div id="paginaCentral>"
                  <section>
                     <nav>
                         <br>
-                        <h3 id="voltarMenu">Pedido Encerrado!</h3>     
-                        <h3 id="voltarMenu">Desculpe não é possível adicionar produto.</h3>       
+                        <h3 id="idErro">Pedido Encerrado!</h3>     
+                        <h3 id="idErro" >Desculpe não é possível adicionar produto.</h3>       
                         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                         <a href="ControlePedidos.html" id="voltarMenu"><p>Voltar para Controle de Pedidos</p></a>
                     </nav>

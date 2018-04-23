@@ -1,3 +1,5 @@
+<%@page import="br.ufjf.dcc192.Dominio.Mesa"%>
+<%@page import="br.ufjf.dcc192.Dominio.Mesa"%>
 <%@page import="java.util.List"%>
 <%@page import="br.ufjf.dcc192.Dominio.Produto"%>
 <%@page import="br.ufjf.dcc192.Dominio.Pedido"%>
@@ -12,11 +14,15 @@
     <body>
         <div id="paginaHome">
             <header>
-                <h1>Mercearia - Pais e Filhos</h1>     
+                <h1>Bar&Restaurante</h1>      
             </header>
             <div id="paginaCentral">
                 <br>
-                 <h1>Lista de Consumo</h1>                 
+                <%
+                    Mesa mesa = (Mesa) request.getAttribute("mesa");
+                %>
+                <h1>Lista de Consumo Mesa número: <%=mesa.getId()%></h1>  
+                
                 <table border = 1 id="tabela">
                     <th>Nome</th>
                     <th>Quantidade</th>

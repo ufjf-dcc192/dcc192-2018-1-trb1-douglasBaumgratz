@@ -6,6 +6,9 @@
     margin: auto;
     height: 600px;
 }
+#idErro{
+    text-align: center;
+}
 
 /*#paginaBorda{
     height: 100%;
@@ -32,8 +35,8 @@
     width: 100%;        
 }
 
-#paginaHome section nav{
-    background-color: yellow;
+#paginaHome section nav{  
+    background-color: lightgrey;
     width: 210px;
     float: left;
     height: 513px;
@@ -41,7 +44,6 @@
 }
 
 #pagina section #paginaCentral{
-    background-color: black;    
     float: right;
     height: 500px;        
 }

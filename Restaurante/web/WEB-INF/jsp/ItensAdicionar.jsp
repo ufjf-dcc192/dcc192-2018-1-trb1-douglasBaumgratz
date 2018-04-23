@@ -1,3 +1,4 @@
+<%@page import="br.ufjf.dcc192.Dominio.Mesa"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -9,11 +10,14 @@
     <body>
         <div id="paginaHome">
             <header>
-                <h1>Mercearia - Pais e Filhos</h1>     
+                <h1>Bar&Restaurante</h1>      
             </header>
             <div id="paginaCentral">
                 <br>                 
-                <h2>Inserir Produto no pedido</h2>
+                <%
+                    Mesa mesa = (Mesa) request.getAttribute("mesa");
+                %>
+                <h1>Inserir produto na Mesa número: <%=mesa.getId()%></h1>  
                 <br>                
                 <br>  
                 <form method="post" id="formulario">

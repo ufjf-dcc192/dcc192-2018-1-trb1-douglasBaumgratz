@@ -33,12 +33,16 @@ public class ControleServlet extends HttpServlet {
                 despachante = request.getRequestDispatcher("WEB-INF/jsp/ItensAdicionadosErro.jsp");
                 despachante.forward(request, response);
             } else {
+                Mesa mesa = pedido.get(id).getMesa();
+                request.setAttribute("mesa", mesa);
                 despachante = request.getRequestDispatcher("WEB-INF/jsp/ItensAdicionar.jsp");
                 despachante.forward(request, response);
             }
         } else if ("/ItensSolicitados.html".equals(request.getServletPath())) {
             Integer id = Integer.parseInt(request.getParameter("id"));
             List<Produto> produto = pedido.get(id).getLista();
+            Mesa mesa = pedido.get(id).getMesa();
+            request.setAttribute("mesa", mesa);
             request.setAttribute("produto", produto);
             despachante = request.getRequestDispatcher("WEB-INF/jsp/ItensSolicitados.jsp");
             despachante.forward(request, response);

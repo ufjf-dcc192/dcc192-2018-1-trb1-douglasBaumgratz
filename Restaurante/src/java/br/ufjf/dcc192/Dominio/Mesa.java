@@ -1,8 +1,8 @@
 package br.ufjf.dcc192.Dominio;
 
 public class Mesa {
-    
-int id;
+
+    int id;
 
     public int getId() {
         return id;
@@ -16,10 +16,4 @@ int id;
         this.id = id;
     }
 
-
-
-
-  
-    
-    
 }
