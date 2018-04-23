@@ -1,3 +1,4 @@
 # br.ufjf.dcc192
 
-Relatório
+Relatório DCC192
+Douglas Baumgratz de Carvalho
