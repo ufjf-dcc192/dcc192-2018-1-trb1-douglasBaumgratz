@@ -104,6 +104,6 @@ public class ControleServlet extends HttpServlet {
 
     private void doPostAdicionarPedido(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Integer numMesa = Integer.parseInt(request.getParameter("numMesa"));
-        ListaDePedidos.getInstance().add(new Pedido(new Mesa(numMesa)));
+        pedidos.add(new Pedido(new Mesa(numMesa)));
     }
 }
