@@ -10,6 +10,7 @@
         <h2>Inserir produto Mesa número: <%=mesa.getId()%></h2><br>       
     </div>
     <form method="post">
+        <div class="form-control">
         <div class="form-group">
             <label for="email">Nome do produto:</label>
             <input type="text" class="form-control" placeholder="Digite o nome" name="name">
@@ -22,12 +23,13 @@
             <label for="pwd">Preço:</label>
             <input type="text" class="form-control" placeholder="Digite o preço" name="preco">
         </div>
+        </div><br>
         <button type="submit" class="btn btn-primary">Salvar</button>
         <button type="reset" class="btn btn-primary">Limpar</button>
     </form><br>
     <div class="alert alert-info text-center">
         <strong>Informação!</strong> Utilize o menu para navegação
-    </div>
-</div>            
+    </div><br>
+</div>  
 
 <%@include file="../jspf/rodape.jspf" %>

@@ -10,7 +10,7 @@
     <div class="text-center">
         <h2>Pedidos</h2><br>
     </div>
-    <table border = 1 class="table table-dark table-striped">
+    <table border = 1 class="table table-dark table-striped text-center">
         <th>Mesa</th>
         <th>Situação</th>
         <th>Abertura</th>

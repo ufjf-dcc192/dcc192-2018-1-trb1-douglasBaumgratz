@@ -36,7 +36,7 @@
     </table><br>
     <div class="alert alert-info text-center">
         <strong>Informação!</strong> Utilize o menu para navegação
-    </div>
+    </div><br>
 </div>
 
 <%@include file="../jspf/rodape.jspf" %>
