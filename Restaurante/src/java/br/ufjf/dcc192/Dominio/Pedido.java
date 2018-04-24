@@ -12,7 +12,9 @@ public class Pedido {
     Time horarioAbertura;
     Time horarioEncerramento;
     List<Produto> lista = new ArrayList<>();
-
+    static final Boolean PEDIDOENCERRADO = false;
+    static final Boolean PEDIDOABERTO = true;
+    
     public Pedido(Mesa mesa) {
         lista.add(new Produto("Cerveja", 2, 5.0));
         lista.add(new Produto("Porção Torresmo", 1, 4.0));
@@ -20,7 +22,7 @@ public class Pedido {
         lista.add(new Produto("Almoço mais Refrigerante(500ml)", 1, 15.0));
         lista.add(new Produto("Dose de Capirinha", 5, 4.0));        
         this.mesa = mesa;
-        this.situacao = true;
+        this.situacao = PEDIDOABERTO;
         horarioAbertura = Time.valueOf(LocalTime.now());
         horarioEncerramento = null;
     }
@@ -59,7 +61,7 @@ public class Pedido {
 
     public void encerrarPedidoNow() {
         this.horarioEncerramento = Time.valueOf(LocalTime.now()); //seto horário de encerramento com base no horário atual        
-        this.situacao = false; //altera situação pedido para false(encerrado);
+        this.situacao = PEDIDOENCERRADO; //altera situação pedido para false(encerrado);
     }
 
     public Double getTotal() {

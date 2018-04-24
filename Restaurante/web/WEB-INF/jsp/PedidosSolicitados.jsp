@@ -53,9 +53,10 @@
                 <th>Total Pedido</th>
                 <th>Itens Solicitados</th>
                 <th>Add Produto</th>
-                <th>Fechar Pedido</th>                                              <%
-                    int i = 0;
-                    for (Pedido pedido : (List<Pedido>) request.getAttribute("pedido")) {
+                <th>Fechar Pedido</th>  
+                    <%
+                        int i = 0;
+                        for (Pedido pedido : (List<Pedido>) request.getAttribute("pedido")) {
                     %>  
                 <tr>                
                     <td><%=pedido.getMesa().getId()%></td>

@@ -39,12 +39,10 @@
         </nav>
 
         <div class="container" style="margin-top:30px">
-            <h3 id="idErro">Pedido Encerrado!</h3>     
-            <h3 id="idErro" >Desculpe não é possível adicionar produto.</h3>     
-
+            <h2>Desculpe não é possível adicionar produto.</h2>     
+            <h2>Pedido Encerrado!</h2>     
             <a href="ControlePedidos.html"><p>Voltar</p></a>
         </div>
-
 
         <div class="jumbotron text-center" style="margin-bottom:0">
             Desenvolvido por: Douglas Baumgratz de Carvalho<br>
