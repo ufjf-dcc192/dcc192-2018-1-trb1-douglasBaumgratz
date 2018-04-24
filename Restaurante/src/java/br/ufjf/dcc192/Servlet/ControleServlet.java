@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "ControlePedidos", urlPatterns = {"/ControlePedidos.html", "/AdicionarṔedido.html", "/EncerrarPedido.html",
+@WebServlet(name = "ControlePedidos", urlPatterns = {"/ControlePedidos.html", "/AdicionarPedido.html", "/EncerrarPedido.html",
     "/ItensAdicionar.html", "/ItensSolicitados.html"})
 public class ControleServlet extends HttpServlet {
 
@@ -26,7 +26,7 @@ public class ControleServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        
+
         if ("/ControlePedidos.html".equals(request.getServletPath())) {
             request.setAttribute("pedido", pedidos);
             tabelaPedidos(request, response);
@@ -46,7 +46,7 @@ public class ControleServlet extends HttpServlet {
             produto = pedidos.get(id).getLista();
             mesa = pedidos.get(id).getMesa();
             pedido = pedidos.get(id);
-            request.setAttribute("mesa", mesa);            
+            request.setAttribute("mesa", mesa);
             request.setAttribute("pedido", pedido);
             request.setAttribute("produto", produto);
             despachante = request.getRequestDispatcher("WEB-INF/jsp/ItensSolicitados.jsp");
@@ -54,12 +54,16 @@ public class ControleServlet extends HttpServlet {
         } else if ("/EncerrarPedido.html".equals(request.getServletPath())) {
             encerrarPedido(request, response);
             tabelaPedidos(request, response);
+        } 
+        else if ("/AdicionarPedido.html".equals(request.getServletPath())) {
+            despachante = request.getRequestDispatcher("WEB-INF/jsp/AdicionarPedido.jsp");
+            despachante.forward(request, response);
         }
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Integer id = Integer.parseInt(request.getParameter("id"));
+        Integer id = Integer.parseInt(request.getParameter("id"));        
         String nome = request.getParameter("nome");
         Integer quantidade = Integer.parseInt(request.getParameter("quantidade"));
         Double preco = Double.parseDouble(request.getParameter("preco"));
@@ -68,6 +72,9 @@ public class ControleServlet extends HttpServlet {
             produto = new Produto(nome, quantidade, preco);
             pedidos.get(id).getLista().add(produto);
             request.setAttribute("produto", pedidos.get(id).getLista());
+        } 
+        else if ("/AdicionarPedido.html".equals(request.getServletPath())) {
+          // ListaDePedidos.getInstance().add(new Pedido(new Mesa()));
         }
         response.sendRedirect("ControlePedidos.html");
     }

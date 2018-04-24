@@ -31,10 +31,10 @@
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Adicionar Pedido</a>
+                        <a class="nav-link" href="AdicionarPedido.html">Adicionar Pedido</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Controle de Pedidos</a>
+                        <a class="nav-link" href="ControlePedidos.html">Pedidos</a>
                     </li>   
                 </ul>
             </div>  
@@ -59,11 +59,11 @@
                     <label for="pwd">Preço:</label>
                     <input type="text" class="form-control" placeholder="Enter preço" name="preco">
                 </div>
-              <button type="submit" class="btn btn-primary">Salvar</button>
-    <button type="reset" class="btn btn-primary">Limpar</button>
+                <button type="submit" class="btn btn-primary">Salvar</button>
+                <button type="reset" class="btn btn-primary">Limpar</button>
             </form>
-        </div>    
-        <a href="ControlePedidos.html" id="voltarMenu"><p>Voltar para Controle de Pedidos</p></a>
+            <br><a href="ControlePedidos.html"><p>Voltar</p></a>
+        </div>            
     </div>
 
     <div class="jumbotron text-center" style="margin-bottom:0">

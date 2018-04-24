@@ -71,8 +71,7 @@
                         i++;
                     }
                 %>        
-            </table>     
-            <a href="index.html"><p>Voltar</p></a>
+            </table>                 
         </div>
 
         <div class="jumbotron text-center" style="margin-bottom:0">

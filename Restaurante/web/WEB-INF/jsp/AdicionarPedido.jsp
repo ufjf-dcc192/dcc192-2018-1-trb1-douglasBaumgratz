@@ -1,9 +1,3 @@
-<%@page import="br.ufjf.dcc192.Dominio.Mesa"%>
-<%@page import="br.ufjf.dcc192.Dominio.Mesa"%>
-<%@page import="java.util.List"%>
-<%@page import="br.ufjf.dcc192.Dominio.Produto"%>
-<%@page import="br.ufjf.dcc192.Dominio.Pedido"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -44,43 +38,28 @@
             </div>  
         </nav>
 
-        <div class="container" style="margin-top:30px">
-            <%
-                Mesa mesa = (Mesa) request.getAttribute("mesa");
-            %>
-            <h1>Lista de Consumo Mesa nÃºmero: <%=mesa.getId()%></h1><br>
+        <div class="container" style="margin-top:30px">            
+          
+            <h2>Adicionar Pedido</h2><br>       
 
-            <table border = 1 class="table table-dark table-striped" >
-                <th>Nome</th>
-                <th>Quantidade</th>
-                <th>PreÃ§o</th>                    
-                <tr>                    
-                    <%
-                        int i = 0;
-                        Pedido pedido = (Pedido) request.getAttribute("pedido");
-                        for (Produto produto : (List<Produto>) request.getAttribute("produto")) {
-                    %>   
-                    <td><%=produto.getNome()%></td>
-                    <td><%=produto.getQuantidade()%></td>
-                    <td><%=produto.getPreco()%></td>                                
-                </tr>
-                <%
-                    }
-                %>
+            <form method="post">
+                <div class="form-group">
+                    <label for="mesa">Número da Mesa:</label>
+                    <input type="text" class="form-control" placeholder="Enter number" name="numMesa">
+                </div>                
+                <button type="submit" class="btn btn-primary">Salvar</button>
+                <button type="reset" class="btn btn-primary">Limpar</button>
+            </form>
+            <br><a href="ControlePedidos.html"><p>Voltar</p></a>
+        </div>    
+        
+    </div>
 
-                <tr>
-                    <td>Total:</td>
-                    <td colspan="2"><%=pedido.getTotal()%></td>
-                </tr>
 
-            </table>  
-            <a href="ControlePedidos.html"><p>Voltar</p></a>
-        </div>
+    <div class="jumbotron text-center" style="margin-bottom:0">
+        Desenvolvido por: Douglas Baumgratz de Carvalho<br>
+        Sistemas de Informação - UFJF
+    </div>
 
-        <div class="jumbotron text-center" style="margin-bottom:0">
-            Desenvolvido por: Douglas Baumgratz de Carvalho<br>
-            Sistemas de InformaÃ§Ã£o - UFJF
-        </div>
-
-    </body>
+</body>
 </html>

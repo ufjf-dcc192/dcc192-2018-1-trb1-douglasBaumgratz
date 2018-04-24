@@ -28,11 +28,11 @@
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Adicionar Pedido</a>
+                    <li class="nav-item">                   
+                        <a class="nav-link" href="AdicionarPedido.html">Adicionar Pedido</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Controle de Pedidos</a>
+                        <a class="nav-link" href="ControlePedidos.html">Pedidos</a>
                     </li>   
                 </ul>
             </div>  
@@ -42,7 +42,7 @@
             <h3 id="idErro">Pedido Encerrado!</h3>     
             <h3 id="idErro" >Desculpe não é possível adicionar produto.</h3>     
 
-            <a href="ControlePedidos.html" id="voltarMenu"><p>Voltar para Controle de Pedidos</p></a>
+            <a href="ControlePedidos.html"><p>Voltar</p></a>
         </div>
 
 
