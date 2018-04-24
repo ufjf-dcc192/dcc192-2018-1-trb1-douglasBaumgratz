@@ -9,7 +9,8 @@ Curso: Sistemas de Informação<br>
 Introdução
 ==========
 
-O Software foi modelado e desenvolvido baseado no cenário de uma empresa em que há a necessidade de fazer o controle dos protocolos contendo nome do setor, número do protocolo e um campo para saber se o protocolo foi consumido ou não, detalhando data e hora da utilização.
+O Software foi modelado e desenvolvido baseado no cenário de uma empresa em que há a necessidade de fazer o controle dos protocolos contendo nome do setor, número do protocolo e um campo para saber se o protocolo foi consumido ou não, detalhando data e hora da utilização.<br>
+
 
 Modelo de dados utilizado
 =========================
@@ -18,7 +19,7 @@ Foram 4 classes do domínio do problema
 --------------------------------------
 Classe Produto contendo nome, quantidade e preço;<br>
 Classe Mesa contendo apenas o id da mesa;<br>
-Classe Lista de Pedidos que retorna uma instancia de uma lista de Pedidos.<br><br>
+Classe Lista de Pedidos que retorna uma instancia de uma lista de Pedidos.<br>
 
 Foram criadas 6 páginas JSP
 ---------------------------
@@ -29,11 +30,15 @@ Página ItensAdicionadosErro, caso um pedido já esteja fechado, será direciona
 Página AdicionarPedidoErro, caso um pedido já esteja cadastrado, não poderá haver outro pedido para o mesmo nome de mesa, caso contrário será direcionado a está página de erro;<br>
 Página AdicionarPedido que adiciona um novo pedido a comanda.<br>
 
+Foram criadas 2 páginas JSPF
+----------------------------
+Cabecalho e Rodapé para comporem o layout das páginas.<br>
+
 	
 Levantamento dos campos necessários para a construção das telas
 ===============================================================
 
-Para construção das telas foi utilizado biblioteca de front-end Boostrap.
+Para construção das telas foi utilizado biblioteca de front-end Boostrap.<br>
 
 
 Pontos importantes sobre funcionamento da interface
@@ -46,11 +51,9 @@ Página AdicionarPedidoErro, caso um pedido já esteja cadastrado, não poderá 
 Página AdicionarPedido que adiciona um novo pedido a comanda.<br>
 
 
-
 Discussão dos pontos que apresentaram maior dificuldade de implementação
 ========================================================================
-A maior dificuldade de implementação foi em relação ao Front-End, problema que foi solucionado com a utilização da biblioteca Boostrap sem maiores problemas. 
-
+A maior dificuldade de implementação foi em relação ao Front-End, que ao final foi solucionado com a utilização da biblioteca Boostrap sem maiores problemas.<br>
 
 
 Pontos onde podem ser realizadas melhorias futuras
