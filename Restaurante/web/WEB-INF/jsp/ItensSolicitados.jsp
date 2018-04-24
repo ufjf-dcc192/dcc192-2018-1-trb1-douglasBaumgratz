@@ -32,7 +32,7 @@
         %>
 
         <tr>
-            <td>Total:</td>
+            <td>Total a pagar:</td>
             <td colspan="2">R$<%=pedido.getTotal()%></td>
         </tr>
 

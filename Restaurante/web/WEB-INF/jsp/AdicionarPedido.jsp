@@ -2,9 +2,9 @@
 <%@include file="../jspf/cabecalho.jspf" %>
 
 <div class="container" style="margin-top:30px">            
-
-    <h2>Adicionar Pedido</h2><br>       
-
+  
+   <h2>Adicionar Pedido</h2><br>       
+   
     <form method="post">
         <div class="form-group">
             <label for="mesa">Número da Mesa:</label>
@@ -12,7 +12,13 @@
         </div>                
         <button type="submit" class="btn btn-primary">Salvar</button>
         <button type="reset" class="btn btn-primary">Limpar</button>
-    </form>
+    </form><br>
+   
+     <div class="alert alert-danger alert-dismissible fade show">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Danger!</strong> Verifique se a mesa está disponível!
+    </div> 
+   
     <br><a href="ControlePedidos.html"><p>Voltar</p></a> 
 
 </div>

@@ -17,6 +17,7 @@
         <th>Add Produto</th>
         <th>Fechar Pedido</th>  
             <%
+                int i=0;
                 for (Pedido pedido : (List<Pedido>) request.getAttribute("pedido")) {
             %>  
         <tr>                
@@ -25,11 +26,12 @@
             <td><%=pedido.getHorarioAbertura()%></td>
             <td><%=pedido.getHorarioEncerramento()%></td>  
             <td><label>R$:<%=pedido.getTotal()%></label></td>    
-            <td><a href="ItensSolicitados.html?id=<%=pedido.getMesa().getId() - 1%>">Visualizar</a></td>
-            <td><a href="ItensAdicionar.html?id=<%=pedido.getMesa().getId() - 1%>">Adicionar</a></td>
-            <td><a href="EncerrarPedido.html?id=<%=pedido.getMesa().getId() - 1%>"><label>Fechar Mesa</label></a></td>
+            <td><a href="ItensSolicitados.html?id=<%=i%>">Visualizar</a></td>
+            <td><a href="ItensAdicionar.html?id=<%=i%>">Adicionar</a></td>
+            <td><a href="EncerrarPedido.html?id=<%=i%>"><label>Fechar Mesa</label></a></td>
         </tr>
         <%
+            i++;
             }
         %>        
     </table>                 

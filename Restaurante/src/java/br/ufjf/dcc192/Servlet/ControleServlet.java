@@ -104,6 +104,11 @@ public class ControleServlet extends HttpServlet {
 
     private void doPostAdicionarPedido(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Integer numMesa = Integer.parseInt(request.getParameter("numMesa"));
-        pedidos.add(new Pedido(new Mesa(numMesa)));
+        if ((pedidos.size() < numMesa)) {            
+            pedidos.add(new Pedido(new Mesa(numMesa)));
+        } else {
+            despachante = request.getRequestDispatcher("WEB-INF/jsp/AdicionarPedidoErro.jsp");
+            despachante.forward(request, response);
+        }
     }
 }

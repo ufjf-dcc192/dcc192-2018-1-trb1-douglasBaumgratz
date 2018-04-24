@@ -15,12 +15,7 @@ public class Pedido {
     static final Boolean PEDIDOENCERRADO = false;
     static final Boolean PEDIDOABERTO = true;
     
-    public Pedido(Mesa mesa) {
-        lista.add(new Produto("Cerveja", 2, 5.0));
-        lista.add(new Produto("Porção Torresmo", 1, 4.0));
-        lista.add(new Produto("Porção Batata Frita com Queijo", 3, 10.0));
-        lista.add(new Produto("Almoço mais Refrigerante(500ml)", 1, 15.0));
-        lista.add(new Produto("Dose de Capirinha", 5, 4.0));        
+    public Pedido(Mesa mesa) {    
         this.mesa = mesa;
         this.situacao = PEDIDOABERTO;
         horarioAbertura = Time.valueOf(LocalTime.now());
