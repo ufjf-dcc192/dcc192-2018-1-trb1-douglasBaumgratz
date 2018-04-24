@@ -19,10 +19,10 @@ Modelo de dados utilizado
 -------------------------
 
 #### H4 Foram 4 classes do domínio do problema;<br>
-    - Classe Pedido para representar uma comanda com id da mesa, hora abertura, hora fechamando, situação e um array de lista de produtos;<br>
-	- Classe Produto contendo nome, quantidade e preço;<br>
-	- Classe Mesa contendo apenas o id da mesa;<br>
-	- Classe Lista de Pedidos que retorna uma instancia de uma lista de Pedidos.<br>
+    Classe Pedido para representar uma comanda com id da mesa, hora abertura, hora fechamando, situação e um array de lista de produtos;<br>
+	Classe Produto contendo nome, quantidade e preço;<br>
+	Classe Mesa contendo apenas o id da mesa;<br>
+	Classe Lista de Pedidos que retorna uma instancia de uma lista de Pedidos.<br>
 
 ####Foram criadas 6 páginas JSP;H4<br>
 	Página PedidosSolicitados que contém uma tabela apresentando todos pedidos cadastrados, com opções de fechar comanda, adicionar novo produto e visualizar itens adicionados;
