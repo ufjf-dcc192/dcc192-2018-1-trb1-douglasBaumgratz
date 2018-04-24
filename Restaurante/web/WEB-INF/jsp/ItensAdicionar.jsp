@@ -12,15 +12,15 @@
     <form method="post">
         <div class="form-group">
             <label for="email">Nome do produto:</label>
-            <input type="text" class="form-control" placeholder="Enter name" name="name">
+            <input type="text" class="form-control" placeholder="Digite o nome" name="name">
         </div>
         <div class="form-group">
             <label for="pwd">Quantidade:</label>
-            <input type="text" class="form-control" placeholder="Enter quantidade" name="quantidade">
+            <input type="text" class="form-control" placeholder="Digite a quantidade" name="quantidade">
         </div>
         <div class="form-group">
             <label for="pwd">Preço:</label>
-            <input type="text" class="form-control" placeholder="Enter preço" name="preco">
+            <input type="text" class="form-control" placeholder="Digite o preço" name="preco">
         </div>
         <button type="submit" class="btn btn-primary">Salvar</button>
         <button type="reset" class="btn btn-primary">Limpar</button>

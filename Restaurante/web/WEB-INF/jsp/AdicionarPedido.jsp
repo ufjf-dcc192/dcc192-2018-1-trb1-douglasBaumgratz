@@ -8,7 +8,7 @@
     <form method="post">
         <div class="form-group">
             <label for="mesa">Número da Mesa:</label>
-            <input type="text" class="form-control" placeholder="Enter number" name="numMesa">
+            <input type="text" class="form-control" placeholder="Digite o número" name="numMesa">
         </div>                
         <button type="submit" class="btn btn-primary">Salvar</button>
         <button type="reset" class="btn btn-primary">Limpar</button>
