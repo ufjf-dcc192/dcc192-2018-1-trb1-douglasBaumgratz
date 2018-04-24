@@ -8,13 +8,11 @@ Curso: Sistemas de Informação<br>
 
 Introdução
 ==========
-
 O Software foi modelado e desenvolvido baseado no cenário de uma empresa em que há a necessidade de fazer o controle dos protocolos contendo nome do setor, número do protocolo e um campo para saber se o protocolo foi consumido ou não, detalhando data e hora da utilização.
-<br>
+
 
 Modelo de dados utilizado
 =========================
-
 Foram 4 classes do domínio do problema
 --------------------------------------
 Classe Produto contendo nome, quantidade e preço;<br>
@@ -33,13 +31,11 @@ Página AdicionarPedido que adiciona um novo pedido a comanda.
 Foram criadas 2 páginas JSPF
 ----------------------------
 Cabecalho e Rodapé para comporem o layout das páginas.
-<br>
+
 	
 Levantamento dos campos necessários para a construção das telas
 ===============================================================
-
 Para construção das telas foi utilizado biblioteca de front-end Boostrap.
-<br>
 
 
 Pontos importantes sobre funcionamento da interface
@@ -50,12 +46,11 @@ Página ItensAdicionar que contém um formulário para cadastrar um produto em d
 Página ItensAdicionadosErro, caso um pedido já esteja fechado, será direcionado a está página de erro;<br>
 Página AdicionarPedidoErro, caso um pedido já esteja cadastrado, não poderá haver outro pedido para o mesmo nome de mesa, caso contrário será direcionado a está página de erro;<br>
 Página AdicionarPedido que adiciona um novo pedido a comanda.
-<br>
+
 
 Discussão dos pontos que apresentaram maior dificuldade de implementação
 ========================================================================
 A maior dificuldade de implementação foi em relação ao Front-End, que ao final foi solucionado com a utilização da biblioteca Boostrap sem maiores problemas.
-<br>
 
 
 Pontos onde podem ser realizadas melhorias futuras
