@@ -7,6 +7,9 @@
 <%@include file="../jspf/cabecalho.jspf" %>
 
 <div class="container" style="margin-top:30px">
+    <div class="text-center">
+        <h2>Pedidos</h2><br>
+    </div>
     <table border = 1 class="table table-dark table-striped">
         <th>Mesa</th>
         <th>Situação</th>
@@ -17,7 +20,7 @@
         <th>Add Produto</th>
         <th>Fechar Pedido</th>  
             <%
-                int i=0;
+                int i = 0;
                 for (Pedido pedido : (List<Pedido>) request.getAttribute("pedido")) {
             %>  
         <tr>                
@@ -31,10 +34,11 @@
             <td><a href="EncerrarPedido.html?id=<%=i%>"><label>Fechar Mesa</label></a></td>
         </tr>
         <%
-            i++;
+                i++;
             }
         %>        
-    </table>                 
+    </table><br>
+    
 </div>
 
 <%@include file="../jspf/rodape.jspf" %>

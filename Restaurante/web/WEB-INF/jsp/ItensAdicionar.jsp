@@ -1,14 +1,14 @@
 <%@page import="br.ufjf.dcc192.Dominio.Mesa"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
 <%@include file="../jspf/cabecalho.jspf" %>
 
 <div class="container" style="margin-top:30px">            
     <%
         Mesa mesa = (Mesa) request.getAttribute("mesa");
     %>
-    <h2>Inserir produto Mesa número: <%=mesa.getId()%></h2><br>       
-
+    <div class="text-center">
+        <h2>Inserir produto Mesa número: <%=mesa.getId()%></h2><br>       
+    </div>
     <form method="post">
         <div class="form-group">
             <label for="email">Nome do produto:</label>
@@ -24,9 +24,10 @@
         </div>
         <button type="submit" class="btn btn-primary">Salvar</button>
         <button type="reset" class="btn btn-primary">Limpar</button>
-    </form>
-    <br><a href="ControlePedidos.html"><p>Voltar</p></a>
+    </form><br>
+    <div class="alert alert-info text-center">
+        <strong>Informação!</strong> Utilize o menu para navegação
+    </div>
 </div>            
-</div>
 
 <%@include file="../jspf/rodape.jspf" %>
