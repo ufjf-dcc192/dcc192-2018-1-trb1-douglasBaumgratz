@@ -3,7 +3,10 @@
 Relatório DCC192<br>
 Aluno: Douglas Baumgratz de Carvalho<br>
 Matrícula: 201276007<br>
+
 Curso: Sistemas de Informação<br>
+-----------------------------
+
 
 
 	O Software foi modelado e desenvolvido baseado no cenário de uma empresa em que há a necessidade de fazer o controle dos protocolos contendo nome do setor, número do protocolo e um campo para saber se o protocolo foi consumido ou não, detalhando data e hora da utilização.
