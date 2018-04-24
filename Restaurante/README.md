@@ -5,9 +5,9 @@ Aluno: Douglas Baumgratz de Carvalho<br>
 Matrícula: 201276007<br>
 Curso: Sistemas de Informação<br>
 
-<p> 
+
 	O Software foi modelado e desenvolvido baseado no cenário de uma empresa em que há a necessidade de fazer o controle dos protocolos contendo nome do setor, número do protocolo e um campo para saber se o protocolo foi consumido ou não, detalhando data e hora da utilização.
-</p>
+
 
 
 	#### H4 Foram 4 classes do domínio do problema;<br>
@@ -24,9 +24,8 @@ Curso: Sistemas de Informação<br>
 	Página AdicionarPedidoErro, caso um pedido já esteja cadastrado, não poderá haver outro pedido para o mesmo nome de mesa, caso contrário será direcionado a está página de erro;<br>
 	Página AdicionarPedido que adiciona um novo pedido a comanda.<br>
 
-
-
-Levantamento dos campos necessários para a construção das telas;
+	
+	Levantamento dos campos necessários para a construção das telas;
 Descrição sucinta dos pontos importantes do funcionamento da interface;
 Discussão dos pontos que apresentaram maior dificuldade de implementação;
 Pontos onde podem ser realizadas melhorias futuras.
