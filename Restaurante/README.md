@@ -35,24 +35,26 @@ Cabecalho e Rodapé para comporem o layout das páginas.
 	
 Levantamento dos campos necessários para a construção das telas
 ===============================================================
-Para construção das telas foi utilizado biblioteca de front-end Boostrap.
+
+Para construção das telas foi utilizado biblioteca de Front-End Boostrap.
 
 
 Pontos importantes sobre funcionamento da interface
 ===================================================
-Página PedidosSolicitados que contém uma tabela apresentando todos pedidos cadastrados, com opções de fechar comanda, adicionar novo produto e visualizar itens adicionados;<br>
-Página ItensSolicitados que contém uma tabela para apresentação detalhada de todos produtos do pedido;<br>
-Página ItensAdicionar que contém um formulário para cadastrar um produto em determinada mesa;<br>
-Página ItensAdicionadosErro, caso um pedido já esteja fechado, será direcionado a está página de erro;<br>
-Página AdicionarPedidoErro, caso um pedido já esteja cadastrado, não poderá haver outro pedido para o mesmo nome de mesa, caso contrário será direcionado a está página de erro;<br>
-Página AdicionarPedido que adiciona um novo pedido a comanda.
+
+Para toda navegação do sistema é utilizado menu principal para voltar entre as páginas;<br>
+A coluna Encerramento da tabela de pedidos é inicializada como null indicando que pedido está em aberto, ao clicar em fechar mesa é setado o horário de encerramento;<br>
+Caso um pedido já esteja fechado, será direcionado a uma página de erro;<br>
+Caso um pedido já esteja cadastrado com o mesmo nome de mesa de um pedido já existente, será direcionado a uma página de erro;
 
 
 Discussão dos pontos que apresentaram maior dificuldade de implementação
 ========================================================================
-A maior dificuldade de implementação foi em relação ao Front-End, que ao final foi solucionado com a utilização da biblioteca Boostrap sem maiores problemas.
+A maior dificuldade de implementação foi em relação ao Front-End, que ao final foi solucionado com a utilização da biblioteca Boostrap.
 
 
 Pontos onde podem ser realizadas melhorias futuras
 ==================================================
 
+Implementação de JSTL;
+Persistência Banco de Dados;
