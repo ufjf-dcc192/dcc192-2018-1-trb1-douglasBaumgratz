@@ -1,9 +1,9 @@
 # br.ufjf.dcc192
 
-Relatório DCC192<br>
-Aluno: Douglas Baumgratz de Carvalho<br>
-Matrícula: 201276007<br>
-Curso: Sistemas de Informação<br>
+Relatório DCC192··
+Aluno: Douglas Baumgratz de Carvalho··
+Matrícula: 201276007··
+Curso: Sistemas de Informação··
 
 
 Introdução
@@ -15,25 +15,26 @@ Modelo de dados utilizado
 =========================
 Foram 4 classes do domínio do problema
 --------------------------------------
-Classe Produto contendo nome, quantidade e preço;<br>
-Classe Mesa contendo apenas o id da mesa;<br>
+Classe Produto contendo nome, quantidade e preço;··
+Classe Mesa contendo apenas o id da mesa;··
 Classe Lista de Pedidos que retorna uma instancia de uma lista de Pedidos.
 
 Foram criadas 6 páginas JSP
 ---------------------------
-Página PedidosSolicitados que contém uma tabela apresentando todos pedidos cadastrados, com opções de fechar comanda, adicionar novo produto e visualizar itens adicionados;<br>
-Página ItensSolicitados que contém uma tabela para apresentação detalhada de todos produtos do pedido;<br>
-Página ItensAdicionar que contém um formulário para cadastrar um produto em determinada mesa;<br>
-Página ItensAdicionadosErro, caso um pedido já esteja fechado, será direcionado a está página de erro;<br>
-Página AdicionarPedidoErro, caso um pedido já esteja cadastrado, não poderá haver outro pedido para o mesmo nome de mesa, caso contrário será direcionado a está página de erro;<br>
+Página PedidosSolicitados que contém uma tabela apresentando todos pedidos cadastrados, com opções de fechar comanda, adicionar novo produto e visualizar itens adicionados;··
+Página ItensSolicitados que contém uma tabela para apresentação detalhada de todos produtos do pedido;··
+Página ItensAdicionar que contém um formulário para cadastrar um produto em determinada mesa;··
+Página ItensAdicionadosErro, caso um pedido já esteja fechado, será direcionado a está página de erro;··
+Página AdicionarPedidoErro, caso um pedido já esteja cadastrado, não poderá haver outro pedido para o mesmo nome de mesa, caso contrário será direcionado a está página de erro;
 Página AdicionarPedido que adiciona um novo pedido a comanda.
 
 Foram criadas 2 páginas JSPF
 ----------------------------
 Cabecalho e Rodapé para comporem o layout das páginas.
 
-E uma classe de Controle Servlet
---------------------------------
+E uma classe Servlet
+--------------------
+ControleServlet responsável por todo controle das requisições;
 	
 Levantamento dos campos necessários para a construção das telas
 ===============================================================
@@ -45,9 +46,9 @@ Para construção das telas foi utilizado biblioteca de front-end Boostrap.
 Pontos importantes sobre funcionamento da interface
 ===================================================
 
-Para toda navegação do sistema é utilizado menu principal para voltar entre as páginas;<br>
-A coluna Encerramento da tabela de pedidos é inicializada como null indicando que pedido está em aberto, ao clicar em fechar mesa é setado o horário de encerramento;<br>
-Caso um pedido já esteja fechado, será direcionado a uma página de erro;<br>
+Para toda navegação do sistema é utilizado menu principal para voltar entre as páginas;
+A coluna Encerramento da tabela de pedidos é inicializada como null indicando que pedido está em aberto, ao clicar em fechar mesa é setado o horário de encerramento;
+Caso um pedido já esteja fechado, será direcionado a uma página de erro;
 Caso um pedido já esteja cadastrado com o mesmo nome de mesa de um pedido já existente, será direcionado a uma página de erro;
 
 
@@ -59,5 +60,5 @@ A maior dificuldade de implementação foi em relação ao Front-End, que ao fin
 Pontos onde podem ser realizadas melhorias futuras
 ==================================================
 
-Implementação de JSTL;<br>
+Implementação de JSTL;··
 Persistência Banco de Dados;
