@@ -32,6 +32,8 @@ Foram criadas 2 páginas JSPF
 ----------------------------
 Cabecalho e Rodapé para comporem o layout das páginas.
 
+E uma classe de Controle Servlet
+--------------------------------
 	
 Levantamento dos campos necessários para a construção das telas
 ===============================================================
