@@ -37,6 +37,7 @@ Levantamento dos campos necessários para a construção das telas
 ===============================================================
 
 Para construção das telas foi utilizado biblioteca de Front-End Boostrap.
+Para construção das telas foi utilizado biblioteca de front-end Boostrap.
 
 
 Pontos importantes sobre funcionamento da interface
@@ -56,5 +57,5 @@ A maior dificuldade de implementação foi em relação ao Front-End, que ao fin
 Pontos onde podem ser realizadas melhorias futuras
 ==================================================
 
-Implementação de JSTL;
+Implementação de JSTL;<br>
 Persistência Banco de Dados;
