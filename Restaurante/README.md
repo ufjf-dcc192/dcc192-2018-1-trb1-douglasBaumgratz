@@ -37,6 +37,7 @@ Levantamento dos campos necessários para a construção das telas
 ===============================================================
 
 Para construção das telas foi utilizado biblioteca de Front-End Boostrap.
+Para construção das telas foi utilizado biblioteca de front-end Boostrap.
 
 
 Pontos importantes sobre funcionamento da interface
